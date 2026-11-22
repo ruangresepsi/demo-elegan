@@ -11,6 +11,9 @@ const TH=QOK?THEMES[QT]:(THEMES[C.theme]||THEMES.champagne),COL=Object.assign({}
 for(const k in COL)R.setProperty("--"+k,COL[k]);
 R.setProperty("--ov",rgb(COL.deep));R.setProperty("--ivrgb",rgb(COL.ivory));
 R.setProperty("--fh",TH.fh);R.setProperty("--fb",TH.fb);R.setProperty("--hs",TH.hs||1);
+const lum=h=>{h=String(h).replace("#","");if(h.length===3)h=h.replace(/./g,"$&$&");const c=[0,2,4].map(i=>parseInt(h.substr(i,2),16)||0);return(.299*c[0]+.587*c[1]+.114*c[2])/255};
+/* teks di atas foto/latar gelap (hero, penutup): untuk tema gelap pakai warna terang agar tetap terbaca */
+const dk=lum(COL.ivory)<.4;R.setProperty("--lt",dk?COL.gold:COL.champ);R.setProperty("--lt2",dk?COL.char:COL.ivory);
 const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?"+TH.g.map(f=>"family="+f).join("&")+"&display=swap";document.head.appendChild(l);
 const m=document.querySelector('meta[name="theme-color"]');if(m)m.content=COL.ivory}
 const cv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
