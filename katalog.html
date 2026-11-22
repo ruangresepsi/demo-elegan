@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Katalog Tema Undangan Digital · Ruang Resepsi</title>
+<meta name="description" content="10 pilihan tema warna undangan pernikahan digital. Klik untuk melihat contoh langsung.">
+<meta name="theme-color" content="#faf6ef">
+<link rel="icon" href="data:,">
+<style>
+:root{--bg:#faf6ef;--tx:#2b2926;--mu:#6f6a62;--ac:#8f7653;--ln:#e6d7bd;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+main{max-width:900px;margin:0 auto;padding:48px 18px 60px}
+.eb{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--ac)}
+h1{font:400 38px/1.15 Georgia,"Times New Roman",serif;margin:10px 0}
+h1 em{color:var(--ac)}
+p.s{color:var(--mu);max-width:520px;margin:0 auto 30px}
+.gr{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));text-align:left}
+.c{background:#fff;border:1px solid var(--ln);padding:14px;display:flex;flex-direction:column;gap:10px}
+.pv{height:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center}
+.pv i{font:italic 22px Georgia,serif}.pv small{font-size:9px;letter-spacing:.3em;text-transform:uppercase;opacity:.9}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}
+.c b{font:600 19px Georgia,serif}.c .f{font-size:12px;color:var(--mu)}.c .d{font-size:13px}
+.c a{margin-top:auto;text-align:center;text-decoration:none;color:var(--ac);border:1px solid var(--ac);padding:10px;font-size:11px;letter-spacing:.25em;text-transform:uppercase}
+.c a:hover{background:var(--ac);color:#fff}
+.n{margin-top:30px;font-size:13px;color:var(--mu)}
+</style></head><body><main>
+<div class="eb">Ruang Resepsi</div>
+<h1>Pilih Tema <em>Undangan</em></h1>
+<p class="s">Klik “Lihat Demo” untuk membuka contoh undangan dengan tema itu di HP Anda. Warna teks dan aksen juga bisa disesuaikan.</p>
+<div class="gr" id="gr"></div>
+<p class="n">Tertarik dengan satu tema? Sebutkan nama temanya saat chat.</p>
+</main>
+<script>
+/* nama, kunci (sama dengan themes.js), latar gelap cover, aksen, warna lembut 1, warna lembut 2, font, cocok untuk */
+var T=[["Champagne Gold","champagne","#2b2926","#b08d57","#faf6ef","#f3ece0","Cormorant Garamond + Jost","Klasik, cocok untuk semua tema acara"],
+["Blush Rose","blush","#3b2a2d","#b76e79","#fdf7f6","#f8ebe9","Playfair Display + Lato","Romantis, pink lembut"],
+["Sage Garden","sage","#26302a","#75896a","#f6f8f3","#e9eee3","EB Garamond + Raleway","Natural, outdoor, rustic"],
+["Dusty Blue","dustyblue","#243240","#5f7d99","#f6f8fa","#e8eef3","Spectral + Work Sans","Modern, tenang, minimalis"],
+["Terracotta Boho","terracotta","#3d261c","#b5603c","#fbf5ee","#f3e4d5","Fraunces + DM Sans","Boho, hangat, kebun"],
+["Burgundy Velvet","burgundy","#4a1520","#8e2f45","#fbf5f4","#f2e4e2","Bodoni Moda + Montserrat","Mewah, formal, ballroom"],
+["Emerald Royale","emerald","#0f3a2b","#1f7a5a","#f4f8f5","#e3eee7","Libre Baskerville + Poppins","Royal, hotel, mewah"],
+["Lavender Dream","lavender","#2d2838","#8470ae","#f9f7fc","#eeeaf5","Cormorant Garamond + Nunito Sans","Lembut, pastel, intimate"],
+["Navy & Gold","navy","#14213d","#a38551","#f5f7fa","#e6ebf2","Crimson Pro + Inter","Formal, elegan, maskulin"],
+["Midnight Luxe","midnight","#0a0a0b","#c9a96a","#121214","#1b1b1f","Cormorant Garamond + Montserrat","Gelap, glamor, acara malam"]];
+document.getElementById("gr").innerHTML=T.map(function(t){
+ return '<div class="c"><div class="pv" style="background:linear-gradient(160deg,'+t[3]+','+t[2]+')"><small>The Wedding of</small><i>Andi &amp; Nina</i></div>'+
+ '<div class="sw"><span style="background:'+t[4]+'"></span><span style="background:'+t[5]+'"></span><span style="background:'+t[3]+'"></span><span style="background:'+t[2]+'"></span></div>'+
+ '<b>'+t[0]+'</b><div class="f">'+t[6]+'</div><div class="d">'+t[7]+'</div>'+
+ '<a href="./?theme='+t[1]+'" target="_blank" rel="noopener">Lihat Demo</a></div>'}).join("");
+</script></body></html>
